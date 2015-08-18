@@ -5,9 +5,9 @@ angular.module('CustomerApp')
     controller: 'CustomersIndexCtrl',
     templateUrl: '/templates/pages/users/index.html'
   })
-  .when('/orders', {
-    controller: 'OrdersCtrl',
-    templateUrl: '/templates/pages/orders/index.html'
+  .when('/users/:id/orders', {
+    controller: 'CustomerOrdersCtrl',
+    templateUrl: '/templates/pages/orders/customer_orders.html'
   })
   .when('/users', {
     controller: 'CustomersIndexCtrl',

@@ -4,6 +4,7 @@ angular.module('CustomerApp')
     for (var i = data.length - 1; i >= 0; i--) {
       if (data[i].id === $routeParams.id) {
         $scope.customer = data[i]
+        break;
       };
     };
   });

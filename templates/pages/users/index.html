@@ -15,6 +15,11 @@
     <td> {{ cust.id }} </td>
     <td><a ng-href="#/users/{{cust.id}}"> {{ cust.name }} </a></td>
     <td> {{ cust.city }} </td>
-    <td><button ng-click="deleteUser(cust.id)">delete</button></td>
+    <td>
+      <button ng-click="deleteUser(cust.id)">delete</button>
+    </td>
+    <td>
+      <a ng-href="#/users/{{cust.id}}/orders">view orders</a>
+    </td>
   </tr>
   </table>
