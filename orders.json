@@ -1,0 +1,42 @@
+[
+  {
+    "customer_id" : "1",
+    "orders":  [ {"id": "1", "title": "order 1", "city": "San Francisco"},
+    {"id": "2", "title": "order 2", "city": "San Diego"},
+    {"id": "3", "title": "order 3", "city": "Manchester"},
+    {"id": "4", "title": "order 4", "city": "Glaswgo"}
+    ]
+  },
+  {
+    "customer_id" : "2",
+    "orders":  [ {"id": "1", "title": "order 1", "city": "San Francisco"},
+    {"id": "2", "title": "order 2", "city": "San Diego"},
+    {"id": "3", "title": "order 3", "city": "Manchester"},
+    {"id": "4", "title": "order 4", "city": "Glaswgo"}
+    ]
+  },
+  {
+    "customer_id" : "3",
+    "orders":  [ {"id": "1", "title": "order 1", "city": "San Francisco"},
+    {"id": "2", "title": "order 2", "city": "San Diego"},
+    {"id": "3", "title": "order 3", "city": "Manchester"},
+    {"id": "4", "title": "order 4", "city": "Glaswgo"}
+    ]
+  },
+  {
+    "customer_id" : "4",
+    "orders":  [ {"id": "1", "title": "order 1", "city": "San Francisco"},
+    {"id": "2", "title": "order 2", "city": "San Diego"},
+    {"id": "3", "title": "order 3", "city": "Manchester"},
+    {"id": "4", "title": "order 4", "city": "Glaswgo"}
+    ]
+  },
+  {
+    "customer_id" : "5",
+    "orders":  [ {"id": "1", "title": "order 1", "city": "San Francisco"},
+    {"id": "2", "title": "order 2", "city": "San Diego"},
+    {"id": "3", "title": "order 3", "city": "Manchester"},
+    {"id": "4", "title": "order 4", "city": "Glaswgo"}
+    ]
+  }
+]
