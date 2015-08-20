@@ -3,19 +3,23 @@ angular.module('CustomerApp')
   $routeProvider
   .when('/', {
     controller: 'CustomersIndexCtrl',
-    templateUrl: '/templates/pages/users/index.html'
+    templateUrl: '/templates/pages/customers/index.html'
   })
-  .when('/users/:id/orders', {
+  .when('/customers/:id/orders', {
     controller: 'CustomerOrdersCtrl',
     templateUrl: '/templates/pages/orders/customer_orders.html'
   })
-  .when('/users', {
+  .when('/customers', {
     controller: 'CustomersIndexCtrl',
-    templateUrl: '/templates/pages/users/index.html'
+    templateUrl: '/templates/pages/customers/index.html'
   })
-  .when('/users/:id', {
+  .when('/orders', {
+    controller: 'OrdersIndexCtrl',
+    templateUrl: '/templates/pages/orders/index.html'
+  })
+  .when('/customers/:id', {
     controller: 'CustomersShowCtrl',
-    templateUrl: '/templates/pages/users/show.html'
+    templateUrl: '/templates/pages/customers/show.html'
   })
   .otherwise({ redirectTo: '/' })
 }]);

@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Customer Orders</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="vendor/angular-min.js"></script>
   <script src="vendor/angluar-routes-min.js"></script>
   <script src="vendor/underscore-min.js"></script>
@@ -14,8 +16,23 @@
   <script src="js/controllers/customer-index-controller.js"></script>
   <script src="js/controllers/customer-show-controller.js"></script>
   <script src="js/controllers/customer-orders-controller.js"></script>
+  <script src="js/controllers/orders-index-controller.js"></script>
 </head>
 <body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Customer Orders</a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a ng-href="/#/customers">Customers</a></li>
+          <li><a ng-href="/#/orders">Orders</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <div ng-view></div>
 </body>
 </html>

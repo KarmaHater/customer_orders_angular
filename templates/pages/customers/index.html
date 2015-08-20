@@ -1,11 +1,11 @@
-<h1>Cutomers</h1>
+<h1>All Cutomers</h1>
   <div>
     Filter: <input type="text" ng-model="customerFilter.name" />
   </div>
   <br>
   <span>Total customers: {{ customers.length }}</span>
   <br>
-  <table>
+  <table class="table table-striped">
     <tr>
       <th ng-click="doSort('id')">Id</th>
       <th ng-click="doSort('name')">Name</th>
@@ -16,10 +16,10 @@
     <td><a ng-href="#/users/{{cust.id}}"> {{ cust.name }} </a></td>
     <td> {{ cust.city }} </td>
     <td>
-      <button ng-click="deleteUser(cust.id)">delete</button>
+      <a ng-href="#/users/{{cust.id}}/orders">view orders</a>
     </td>
     <td>
-      <a ng-href="#/users/{{cust.id}}/orders">view orders</a>
+      <div class=" glyphicon glyphicon-remove" ng-click="deleteUser(cust.id)"></div>
     </td>
   </tr>
   </table>

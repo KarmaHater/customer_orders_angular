@@ -1,0 +1,22 @@
+<h1>All Orders</h1>
+  <div>
+    Filter: <input type="text" ng-model="customerFilter.name" />
+  </div>
+  <br>
+  <span>Total orders: {{ orders.length }}</span>
+  <br>
+  <table class="table table-striped">
+    <tr>
+      <th ng-click="doSort('id')">Id</th>
+      <th ng-click="doSort('name')">Name</th>
+      <th ng-click="doSort('city')">City</th>
+  </tr>
+  <tr ng-repeat="order in orders">
+    <td> {{ cust.id }} </td>
+    <td><a ng-href="#/users/{{cust.id}}"> {{ cust.title }} </a></td>
+    <td> {{ cust.city }} </td>
+    <td>
+      <a ng-href="#/orders/{{order.id}}/orders">view orders</a>
+    </td>
+  </tr>
+  </table>

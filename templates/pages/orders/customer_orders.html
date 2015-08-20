@@ -1,13 +1,13 @@
 <h1>{{ customer.name }} Orders</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>id</th>
     <th>title</th>
     <th>city</th>
     <th>completed</th>
   </tr>
-  <tr ng-repeat="order in customerOrders" ng-class="order.completed ? 'green' : 'red'">
+  <tr ng-repeat="order in customerOrders" ng-class="order.completed ? 'success' : 'danger'">
     <td >{{ order.id}}</td>
     <td>{{ order.title}}</td>
     <td>{{ order.city}}</td>

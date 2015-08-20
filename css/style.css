@@ -6,11 +6,6 @@
   outline: 2px solid green;
 }
 
-td {
-  padding: 10px;
-}
-
-tr {
-  display: block;
-  margin: 10px;
+.glyphicon {
+  color: red;
 }
