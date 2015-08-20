@@ -10,6 +10,8 @@
       <th ng-click="doSort('id')">Id</th>
       <th ng-click="doSort('name')">Name</th>
       <th ng-click="doSort('city')">City</th>
+      <th></th>
+      <th></th>
   </tr>
   <tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse">
     <td> {{ cust.id }} </td>

@@ -8,15 +8,12 @@
   <table class="table table-striped">
     <tr>
       <th ng-click="doSort('id')">Id</th>
-      <th ng-click="doSort('name')">Name</th>
+      <th ng-click="doSort('name')">title</th>
       <th ng-click="doSort('city')">City</th>
   </tr>
   <tr ng-repeat="order in orders">
-    <td> {{ cust.id }} </td>
-    <td><a ng-href="#/users/{{cust.id}}"> {{ cust.title }} </a></td>
-    <td> {{ cust.city }} </td>
-    <td>
-      <a ng-href="#/orders/{{order.id}}/orders">view orders</a>
-    </td>
+    <td> {{ order.id }} </td>
+    <td><a ng-href="#/users/{{order.id}}"> {{ order.title }} </a></td>
+    <td> {{ order.city }} </td>
   </tr>
   </table>
