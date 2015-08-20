@@ -1,5 +1,7 @@
 angular.module('CustomerApp')
 .controller('CustomersIndexCtrl', ['$scope', '$http', '$log', 'customersFactory', function ($scope, $http, $log, customersFactory) {
+  $scope.sortBy = 'name';
+  $scope.reverse = false;
   function init() {
     customersFactory.getCustomers()
     .success(function(data){
@@ -12,8 +14,6 @@ angular.module('CustomerApp')
     });
   };
   init();
-  $scope.sortBy = 'name';
-  $scope.reverse = false;
   $scope.doSort = function(propName) {
     $scope.sortBy = propName;
     $scope.reverse = !$scope.reverse

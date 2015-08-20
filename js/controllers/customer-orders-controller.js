@@ -1,23 +1,24 @@
 angular.module('CustomerApp')
-.controller('CustomerOrdersCtrl', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
-  $scope.customer = null;
+.controller('CustomerOrdersCtrl', ['$scope', '$http', '$routeParams', '$log', 'ordersFactory', function ($scope, $http, $routeParams, $log, ordersFactory) {
   $http.get('users.json').success(function(data){
-    for (var i = data.length - 1; i >= 0; i--) {
-      if (data[i].id === $routeParams.id) {
-        $scope.customer = data[i]
-        $scope.getCutomerOrders(data[i].id)
-        break;
+    _.filter(data, function(cust){ 
+      if (cust.id === $routeParams.id) {
+        $scope.customer = cust
+        $scope.getCutomerOrders(cust.id)
       };
-    };
+    });
   });
   $scope.getCutomerOrders = function(id) {
-      $http.get('orders.json').success(function(data){
-      for (var i = data.length - 1; i >= 0; i--) {
-        if (data[i].customer_id === $routeParams.id) {
-          $scope.customerOrders = data[i].orders
-          break;
-        };
-      };
+    ordersFactory.getOrders()
+    .success(function(data){
+      _.filter(data, function(order){
+        if (order.customer_id === $routeParams.id) $scope.customerOrders = order.orders
+      });
+    })
+    .error(function(data, status, headers, config) {
+      $log.log("data: " + data)
+      $log.log("status: " + status)
+      $log.log("config: " + config)
     });
   }
 }]);
