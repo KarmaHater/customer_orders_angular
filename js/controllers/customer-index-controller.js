@@ -1,8 +1,17 @@
 angular.module('CustomerApp')
-.controller('CustomersIndexCtrl', ['$scope', '$http', function ($scope, $http) {
-  $http.get('users.json').success(function(data){
-    $scope.customers = data;
-  });
+.controller('CustomersIndexCtrl', ['$scope', '$http', '$log', 'customersFactory', function ($scope, $http, $log, customersFactory) {
+  function init() {
+    customersFactory.getCustomers()
+    .success(function(data){
+      $scope.customers = data
+    })
+    .error(function(data, status, headers, config) {
+      $log.log("data: " + data)
+      $log.log("status: " + status)
+      $log.log("config: " + config)
+    });
+  };
+  init();
   $scope.sortBy = 'name';
   $scope.reverse = false;
   $scope.doSort = function(propName) {

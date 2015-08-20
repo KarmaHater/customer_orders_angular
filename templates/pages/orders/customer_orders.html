@@ -5,10 +5,12 @@
     <th>id</th>
     <th>title</th>
     <th>city</th>
+    <th>completed</th>
   </tr>
-  <tr ng-repeat="order in customerOrders">
-    <td>{{ order.id}}</td>
+  <tr ng-repeat="order in customerOrders" ng-class="order.completed ? 'green' : 'red'">
+    <td >{{ order.id}}</td>
     <td>{{ order.title}}</td>
     <td>{{ order.city}}</td>
+    <td>{{ order.completed}}</td>
   </tr>
 </table>

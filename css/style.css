@@ -1,0 +1,16 @@
+.red {
+  outline: 2px solid red;
+}
+
+.green {
+  outline: 2px solid green;
+}
+
+td {
+  padding: 10px;
+}
+
+tr {
+  display: block;
+  margin: 10px;
+}
