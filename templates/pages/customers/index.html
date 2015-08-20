@@ -13,10 +13,10 @@
   </tr>
   <tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse">
     <td> {{ cust.id }} </td>
-    <td><a ng-href="#/users/{{cust.id}}"> {{ cust.name }} </a></td>
+    <td><a ng-href="#/customers/{{cust.id}}"> {{ cust.name }} </a></td>
     <td> {{ cust.city }} </td>
     <td>
-      <a ng-href="#/users/{{cust.id}}/orders">view orders</a>
+      <a ng-href="#/customers/{{cust.id}}/orders">view orders</a>
     </td>
     <td>
       <div class=" glyphicon glyphicon-remove" ng-click="deleteUser(cust.id)"></div>
