@@ -1,1 +1,1 @@
-angular.module('CustomerApp', ['ngRoute'])
+angular.module('CustomerApp', ['ngAnimate','ngRoute'])
