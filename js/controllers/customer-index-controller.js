@@ -19,6 +19,7 @@ angular.module('CustomerApp')
     $scope.reverse = !$scope.reverse
   };
   $scope.deleteUser = function(id) {
+    debugger
     $scope.customers = _.filter($scope.customers, function(cust){ return cust.id != id; });
   }
 }])
