@@ -13,7 +13,7 @@
       <th></th>
       <th></th>
   </tr>
-  <tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse">
+  <tr class="repeat-animation" ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse">
     <td> {{ cust.id }} </td>
     <td><a ng-href="#/customers/{{cust.id}}"> {{ cust.name }} </a></td>
     <td> {{ cust.city }} </td>

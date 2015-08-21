@@ -11,7 +11,7 @@
       <th ng-click="doSort('name')">title</th>
       <th ng-click="doSort('city')">City</th>
   </tr>
-  <tr ng-repeat="order in orders">
+  <tr class="repeat-animation" ng-repeat="order in orders">
     <td> {{ order.id }} </td>
     <td><a ng-href="#/users/{{order.id}}"> {{ order.title }} </a></td>
     <td> {{ order.city }} </td>
